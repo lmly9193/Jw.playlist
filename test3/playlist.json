@@ -8,11 +8,11 @@
             {
                 "label": "英文",
                 "kind": "captions",
-                "file": "/assets/captions-en.vtt"
+                "file": "https://lmly9193.github.io/json.playlist/test3/elephants-dream-subtitles-en.vtt"
             },
             {
                 "kind": "chapters",
-                "file": "/assets/captions-fr.vtt"
+                "file": "https://lmly9193.github.io/json.playlist/test3/elephants-dream-chapters-en.vtt"
             }
         ]
     }
