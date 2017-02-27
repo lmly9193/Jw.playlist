@@ -1,19 +1,19 @@
 [
-   {
-      "title":"",
-      "description":"",
-      "image":"",
-      "sources":"https://drive.google.com/open?id=0B55s6j212kotVUE0ZVp5R0lhSlE"
-      "tracks": [
+    {
+        "title": "",
+        "description": "",
+        "image": "",
+        "sources": "https://drive.google.com/open?id=0B55s6j212kotVUE0ZVp5R0lhSlE",
+        "tracks": [
             {
                 "label": "英文",
                 "kind": "captions",
                 "file": "/assets/captions-en.vtt"
             },
             {
-                "kind":"chapters",
+                "kind": "chapters",
                 "file": "/assets/captions-fr.vtt"
             }
         ]
-   }
+    }
 ]
