@@ -5,9 +5,13 @@
         "image": "https://lmly9193.github.io/json.playlist/test1/default.png",
         "tracks": [
             {
+                "label": "關閉",
+                "kind": "captions",
+                "default": "true"
+            },
+            {
                 "label": "英文",
                 "kind": "captions",
-                "default": "true",
                 "file": "/assets/captions-en.vtt"
             },
             {
