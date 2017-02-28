@@ -1,0 +1,11 @@
+html,body{
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+.jw-dock-image {
+  background-size: 45%;
+  opacity: 1;
+}
