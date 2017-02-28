@@ -51,7 +51,7 @@
 
             //Skin
             skin: {
-                name: "tube",
+                //name: "tube",
                 active: "red",
                 inactive: "white"
             },
