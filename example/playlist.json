@@ -2,12 +2,12 @@
     {
         "title": "Captions Example",
         "description": "Adding Closed Captions",
-        "image": "https://lmly9193.github.io/json.playlist/example/Captions.jpg",
+        "image": "https://lmly9193.github.io/Jw.playlist/example/Captions.jpg",
         "tracks": [
             {
                 "label": "英文",
                 "kind": "captions",
-                "file": "https://lmly9193.github.io/json.playlist/example/Captions.vtt"
+                "file": "https://lmly9193.github.io/Jw.playlist/example/Captions.vtt"
             }
         ],
         "sources": "https://drive.google.com/open?id=0B757HvrhbFeicGJKQ1ByODZHM1k"
@@ -15,11 +15,11 @@
     {
         "title": "Chapter Example",
         "description": "Adding Chapter Markers",
-        "image": "https://lmly9193.github.io/json.playlist/example/Captions.jpg",
+        "image": "https://lmly9193.github.io/Jw.playlist/example/Captions.jpg",
         "tracks": [
             {
                 "kind": "chapters",
-                "file": "https://lmly9193.github.io/json.playlist/example/Chapter.vtt"
+                "file": "https://lmly9193.github.io/Jw.playlist/example/Chapter.vtt"
             }
         ],
         "sources": "https://drive.google.com/open?id=0B757HvrhbFeicWhGUXdnTTlDUWM"
@@ -27,11 +27,11 @@
     {
         "title": "Thumbnails",
         "description": "Adding Preview Thumbnails",
-        "image": "https://lmly9193.github.io/json.playlist/example/Thumbnails.jpg",
+        "image": "https://lmly9193.github.io/Jw.playlist/example/Thumbnails.jpg",
         "tracks": [
             {
                 "kind": "thumbnails",
-                "file": "https://lmly9193.github.io/json.playlist/example/Thumbnails.vtt"
+                "file": "https://lmly9193.github.io/Jw.playlist/example/Thumbnails.vtt"
             }
         ],
         "sources": "https://drive.google.com/open?id=0B757HvrhbFeiUGs4Nng5OXV1MVE"
