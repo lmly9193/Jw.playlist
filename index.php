@@ -11,7 +11,7 @@
     <script src='jwplayer/jwplayer.js'></script>
     <script src='jwplayer/provider.html5.js'></script>
     <script src='https://lmly9193.github.io/Jw.playlist/key.js'></script>
-    <link rel="stylesheet" href='css/fullscreen.css'>
+    <link rel="stylesheet" href='css/fullscreenless.css'>
 </head>
 
 <body>
