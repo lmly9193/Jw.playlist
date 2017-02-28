@@ -54,11 +54,11 @@
   background-color: transparent;
 }
 
-.jw-skin-tube .jw-button-color {
+.jw-skin-tube .jw-button-color .jw-media .jw-dock-buttom {
   color: #fff;
 }
 
-.jw-skin-tube .jw-button-color:hover {
+.jw-skin-tube .jw-button-color .jw-media .jw-dock-buttom:hover {
   color: #f1c40f;
 }
 
