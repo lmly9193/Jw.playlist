@@ -8,10 +8,10 @@
     <meta name="description" content="DESCRIPTION">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAABvAAAAbwHxotxDAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFFQTFRF////AAAAGwAALQEBPgICOAICSCEhTwMDUkVFUkZGVD4+VQMDXx0dghERkgUFmQUFmo+PnpaWogUFpQUFrgYGuQYGugYG0wcH1QcH6Ojo////VIe8EAAAAAZ0Uk5TAAhV1OLk46qZIwAAAFJJREFUGFdjYMAEjEgAyGViZkECzEwMzBIogJmBFUwLiUMFWCECwhxsoigC/IKSXLyoAlJSAjz4BdC0CHOiGYpsLdxhfOzs3CJizJhOx/AcOgAA5zwM2aaHDyMAAAAASUVORK5CYII=">
-    <script src='jwplayer/jwplayer.js'></script>
-    <script src='jwplayer/provider.html5.js'></script>
+    <script src='jwplayer-7.9.3/jwplayer.js'></script>
+    <script src='jwplayer-7.9.3/provider.html5.js'></script>
     <script src='https://lmly9193.github.io/Jw.playlist/key.js'></script>
-    <link rel="stylesheet" href='css/fullscreenless.css'>
+    <link rel="stylesheet" href='css/fullscreen.css'>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 
             //Rendering and Loading
             primary: "html5", //default:"html5" or "flash"
-            preload: "metadata", //"auto","none","metadata"
+            preload: "none", //"auto","none","metadata"
 
             //Skin
             skin: {
