@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^playlist/(\w+)/?$ index.php?playlist=$1
+RewriteRule ^playlist/[a-z]+:\/\/[a-z0-9_\-\/.%]+/i?$ index.php?playlist=$1
