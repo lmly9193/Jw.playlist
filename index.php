@@ -12,6 +12,8 @@
     <script src='jwplayer-7.9.3/provider.html5.js'></script>
     <script src='https://lmly9193.github.io/Jw.playlist/key.js'></script>
     <link rel="stylesheet" href='css/fullscreen.css'>
+    <link rel="stylesheet" href='jwplayer-7.9.3/skins/seven.css'>
+    <link rel="stylesheet" href='css/tube.css'>
 </head>
 
 <body>
