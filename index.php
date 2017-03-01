@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Video Embeding System</title>
-    <meta name="description" content="DESCRIPTION">
+    <meta name="description" content="Video Embeding System">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAABvAAAAbwHxotxDAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFFQTFRF////AAAAGwAALQEBPgICOAICSCEhTwMDUkVFUkZGVD4+VQMDXx0dghERkgUFmQUFmo+PnpaWogUFpQUFrgYGuQYGugYG0wcH1QcH6Ojo////VIe8EAAAAAZ0Uk5TAAhV1OLk46qZIwAAAFJJREFUGFdjYMAEjEgAyGViZkECzEwMzBIogJmBFUwLiUMFWCECwhxsoigC/IKSXLyoAlJSAjz4BdC0CHOiGYpsLdxhfOzs3CJizJhOx/AcOgAA5zwM2aaHDyMAAAAASUVORK5CYII=">
     <script src='jwplayer-7.9.3/jwplayer.js'></script>
     <script src='jwplayer-7.9.3/provider.html5.js'></script>
     <script src='https://lmly9193.github.io/Jw.playlist/key.js'></script>
     <link rel="stylesheet" href='css/fullscreen.css'>
-    <link rel="stylesheet" href='jwplayer-7.9.3/skins/seven.css'>
-    <link rel="stylesheet" href='css/tube.css'>
 </head>
 
 <body>
@@ -22,7 +20,7 @@
         var playerInstance = jwplayer("myElement");
         playerInstance.setup({
             //Meta
-            playlist: <?php include_once "playlist.php" ?> ,
+            playlist: <?php include_once "playlist.php"; ?>,
 
             //Behavior
             mute: "false", //是否靜音
@@ -68,7 +66,7 @@
             //Sharing
             sharing: {
                 heading: "分享",
-                //link: "http://localhost:20080/z/?<?php echo $_SERVER["QUERY_STRING"]?>",
+                link: "<?php echo $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]; ?>",
                 //code: "<iframe src='https://drive.google.com/file/d/0B55s6j212kotVUE0ZVp5R0lhSlE/preview' width='640' height='480'></iframe>",
                 sites: ["facebook", "twitter", "tumblr", "googleplus", "reddit", "linkedin", "interest", "email"]
             }
