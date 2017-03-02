@@ -12,6 +12,7 @@
     <script src='jwplayer-7.9.3/provider.html5.js'></script>
     <script src='https://lmly9193.github.io/Jw.playlist/key.js'></script>
     <link rel="stylesheet" href='css/fullscreen.css'>
+    <link rel="stylesheet" href='css/tube.css'>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
             width: "100%",
             displaytitle: "true",
             displaydescription: "true",
-            timesliderabove: "true",
+            //timesliderabove: "true",
 
             //Rendering and Loading
             primary: "html5", //default:"html5" or "flash"
@@ -59,15 +60,15 @@
                 file: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAL1QTFRF////AAAAAAAAAAAAAAAABgAABwAABAAAAgAAHQEBJAEBAAAAAwEBBgAABgMDBwUFDgsLEAsLEQEBEQsLEwEBGBMTGBQUHwcHKQcHKygoNQYGPjg4Pzw8TQgIVVJSWQMDYwMDZgQEcAQEcgQEcwQEdAQEfAQEiwUFjIyMkgUFkwUFlgUFmQUFoAUFo6OjpQUFsAYGuQYGvAYGwAYGwgYGzAcH0QcH0tLS0wcH1AcH1QcH4eHh7e3t/v7+////506o6gAAAAt0Uk5TAAMQKSy4w/L5/f2Ug/EpAAAArklEQVQ4y72TxxKCMBBAF2mB2HsviCjYxQZq/v+znHhzJLsHR981byZlXwD+gpZToL2WDYtxBcwyAHTmBmsFgct0MJ0kVZI4Jth+iuDbwENMCPmb4HknVIhqjdYWE8a9+zA/OWOCEJtye4cK4tYvzq6YIB6LUjfGBCEuncFXArUFdUjimsRDRZUm/tTksLLH/RlMXC9IqofRVAaTkdxqLlmm+6NMjoyWzJ7+OD/nCQkviYvQ3qcwAAAAAElFTkSuQmCC",
                 hide: "false",
                 link: "https://github.com/lmly9193",
-                margin: "16",
+                margin: "8",
                 position: "top-left" //default:"top-right" or "top-left","bottom-left","bottom-right"
             },
 
             //Sharing
             sharing: {
                 heading: "分享",
-                link: "<?php echo $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]; ?>",
-                //code: "<iframe src='https://drive.google.com/file/d/0B55s6j212kotVUE0ZVp5R0lhSlE/preview' width='640' height='480'></iframe>",
+                link: "Custom Link",
+                code: "<iframe src='<?php echo $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]; ?>' width='640' height='480'></iframe>",
                 sites: ["facebook", "twitter", "tumblr", "googleplus", "reddit", "linkedin", "interest", "email"]
             }
         });
@@ -75,15 +76,15 @@
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfhAhwOMiXdKXT8AAAAoUlEQVQoz4WRvRGCUBAGF4fhVWAVJIaWYTlWQTHKTwsSGZnSgKGZyRqA+MDn+GV3u3M3c4cHB6OA+7jOqdjSE+dBDwR2AKgXvmKwmyamBIOt2nlNChNuDV4SgsFmxJAQLKzVxgBg6X4hTLge8bs5Cxae1dpiZvEKC0/q+YPXwlE9xXgU8rmqgCp7ft8secnPhA1/kjmw5faDltxZv3uRwcMLdtjIVcxHYWwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDItMjhUMTQ6NTA6MzcrMDE6MDATThFcAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTAyLTI4VDE0OjUwOjM3KzAxOjAwYhOp4AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=",
             "在新視窗中開啟",
             function() {
-                window.location.href = playerInstance.getPlaylistItem()['preview'];
+                window.open("https://drive.google.com/file/d/"+playerInstance.getPlaylistItem()['fileId']+"/preview", "_blank");
             },
-            "newtabe"
+            "preview"
         );
         playerInstance.addButton(
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfhAhwOKDF33lpaAAAAbElEQVQoz72PoQ2AMBQFrwSBbMIAKCZgGRJGQTMKO7AECZ5hHoa2If0Fx8l3Zx5EdChwpLXigx+CGtQzAODj6jUCsLsTUKNNFpuacNBKkjaTp86SXD8SW8ekrO/kTVs40MJUsKuba6ClKwQtXHK6ch70HrrzAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAyLTI4VDE0OjQwOjQ5KzAxOjAwiDq82AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMi0yOFQxNDo0MDo0OSswMTowMPlnBGQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC",
             "下載",
             function() {
-                window.location.href = playerInstance.getPlaylistItem()['file'];
+                window.open("https://docs.google.com/uc?id="+playerInstance.getPlaylistItem()['fileId']+"&export=download", "_blank");
             },
             "download"
         );

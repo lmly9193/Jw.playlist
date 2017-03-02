@@ -25,7 +25,7 @@
 			array_multisort($ksort_array, SORT_DESC, $value);
 			
 			#replace sources and add preview
-			$value = array(sources => $value,preview => "https://drive.google.com/file/d/".$match[1]."/preview");
+			$value = array(sources => $value,fileId => $match[1]);
 		}
 		
 		#combine $fmt_stream_map into $json_playlist
