@@ -27,12 +27,11 @@
           font-feature-settings: "liga";
   -moz-osx-font-smoothing: grayscale;
 }
-
+@media screen and (min-device-width: 425px) {
 .jwplayer.jw-flag-fullscreen {
-  font-size: 20px;
+  font-size: 22px;
 }
-
-
+}
 /*** ICONS ***/
 
 .jw-skin-tube.jwplayer.jw-state-idle .jw-icon-display:before {
