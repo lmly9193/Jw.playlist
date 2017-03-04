@@ -1,7 +1,7 @@
 <?php
-	include_once "curl.php";
+	ini_set("memory_limit","2048M");
 	if(empty($json_playlist=json_decode(curl($_GET["playlist"]),true))){
-		print('["Error loading playlist"]');
+		echo '["Error loading playlist"]';
 	}else{
 		#curl json.playlist to array $json_playlist
 		#fmt_stream_map for each
@@ -11,7 +11,7 @@
 			$value=json_decode(curl("https://api.getlinkdrive.com/getlink?url=".$value),true);
 			#remove "src","res" and re-value label
 			foreach(array_keys($value) as &$key){
-				$value[$key][label]=preg_replace("/[^\d]","",$value[$key][label]);
+				$value[$key][label]=strtr($value[$key][label],"p","");//preg_replace("/[^\d]","",$value[$key][label]);
 				unset($value[$key][src],$value[$key][res]);
 			}
 			#ksort array
@@ -25,5 +25,27 @@
 		#combine $fmt_stream_map into $json_playlist
 		$playlist=array_replace_recursive($json_playlist,$fmt_stream_map);
 		#print $playlist by json
-		print(json_encode($playlist,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE));
+		echo json_encode($playlist,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
+	}
+	#curl function
+	function curl($url){
+		$ch=curl_init();
+		curl_setopt($ch,CURLOPT_URL,$url);
+		$head[]="Connection: keep-alive";
+		$head[]="Keep-Alive: 300";
+		$head[]="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7";
+		$head[]="Accept-Language: en-us,en;q=0.5";
+		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36');
+		curl_setopt($ch,CURLOPT_ENCODING,'gzip');
+		curl_setopt($ch,CURLOPT_HTTPHEADER,$head);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,false);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($ch,CURLOPT_TIMEOUT,60);
+		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,60);
+		curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);
+		return curl_exec($ch);
+		curl_close($ch);
+		#delay 0.25 sec = 250000 
+		usleep(250000);
 	}
