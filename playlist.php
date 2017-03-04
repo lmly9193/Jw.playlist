@@ -11,7 +11,7 @@
 			$value=json_decode(curl("https://api.getlinkdrive.com/getlink?url=".$value),true);
 			#remove "src","res" and re-value label
 			foreach(array_keys($value) as &$key){
-				$value[$key]["label"]=preg_replace("/[^\d]","",$value[$key][label]);
+				$value[$key]["label"]=str_ireplace("p","",$value[$key]["label"]);
 				unset($value[$key]["src"],$value[$key]["res"]);
 			}
 			#ksort array
