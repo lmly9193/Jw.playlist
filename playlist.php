@@ -11,16 +11,16 @@
 			$value=json_decode(curl("https://api.getlinkdrive.com/getlink?url=".$value),true);
 			#remove "src","res" and re-value label
 			foreach(array_keys($value) as &$key){
-				$value[$key][label]=strtr($value[$key][label],"p",null);//preg_replace("/[^\d]","",$value[$key][label]);
-				unset($value[$key][src],$value[$key][res]);
+				$value[$key]["label"]=strtr($value[$key]["label"],"p","q");//preg_replace("/[^\d]","",$value[$key][label]);
+				unset($value[$key]["src"],$value[$key]["res"]);
 			}
 			#ksort array
 			foreach($value as $label=>$quality){
-				$ksort_array[$label]=$quality[label];
+				$ksort_array[$label]=$quality["label"];
 			}
 			array_multisort($ksort_array,SORT_DESC,$value);
 			#replace sources and add preview
-			$value=array(sources=>$value,fileId=>$match[1]);
+			$value=array(sources=>$value,fileId=>$match["1"]);
 		}
 		#combine $fmt_stream_map into $json_playlist
 		$playlist=array_replace_recursive($json_playlist,$fmt_stream_map);
