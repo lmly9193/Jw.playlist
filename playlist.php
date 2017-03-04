@@ -34,4 +34,3 @@
 		#print $playlist by json
 		print(json_encode($playlist,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE));
 	}
-	echo memory_get_usage();
