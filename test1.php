@@ -14,7 +14,7 @@
 			curl_setopt($this->ch,CURLOPT_HTTPHEADER,$this->head);
 			curl_setopt($this->ch,CURLOPT_SSL_VERIFYHOST,false);
 			curl_setopt($this->ch,CURLOPT_SSL_VERIFYPEER,false);
-			curl_setopt($this->ch,CURLOPT_RETURNTRANSFER,1);
+			curl_setopt($this->ch,CURLOPT_RETURNTRANSFER,0);
 			curl_setopt($this->ch,CURLOPT_TIMEOUT,30);
 			curl_setopt($this->ch,CURLOPT_CONNECTTIMEOUT,30);
 			curl_setopt($this->ch,CURLOPT_FOLLOWLOCATION,true);
