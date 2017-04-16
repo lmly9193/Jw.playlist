@@ -24,4 +24,4 @@
 	}
 	
 	$get_video_info = new get_video_info;
-	echo $get_video_info->curl("gcast.azurewebsites.net/test.php");
+	$get_video_info->curl("https://gcast.azurewebsites.net/test.php");
